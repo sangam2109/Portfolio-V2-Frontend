@@ -37,7 +37,7 @@ const Contact = () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       // Send the message to the backend
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('https://sangamportfolio.onrender.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
