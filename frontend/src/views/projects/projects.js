@@ -16,6 +16,7 @@ import dictionary from "../../assets/project/dictionary.jpg";
 import bootcamp from "../../assets/project/bootcamp.jpg";
 import portfolio from "../../assets/project/portfolio.jpg";
 import interactivecard from "../../assets/project/interactivecard.jpg";
+import Calculator from "../../assets/project/sgpaCalculator.jpg"
 
 
 
@@ -55,6 +56,14 @@ export default function Projects() {
             techStack={"EXPRESS JS, NODE JS, IONIC , MONGODB, MATERIAL UI"}
             projectLiveLink="https://sports2024.vercel.app/"
             projectLink="https://github.com/Vansh1190/Sports22"
+          />
+          <ProjectCard
+            projectImage={Calculator}
+            projectName={"GPA Calculator"}
+            aboutProject={"GPA calculator tailored for GNDEC students, allowing them to input their marks, view results instantly, and generate detailed reports. With built-in support for various branches, the tool efficiently computes semester-wise grades, aiding students in tracking their academic progress seamlessly."}
+            techStack={"REACT JS,  MATERIAL UI"}
+            projectLiveLink="https://www.sgpacalculator.tech/"
+            projectLink="https://github.com/sangam2109/SgpaCalculator"
           />
           <ProjectCard
             projectImage={bootcamp} // Replace virtualLabImage with the actual image source
