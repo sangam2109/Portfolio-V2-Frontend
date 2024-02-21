@@ -20,7 +20,7 @@ import { MdLocalMovies } from "react-icons/md";
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
 import AboutMeInfo from "../../components/aboutMeInfo/aboutMeInfo";
-import myphoto from "../../assets/aboutMePhoto .jpg";
+import myphoto from "../../assets/aboutMePhoto.jpg";
 
 export default function About() {
   const styles = useStyleConfig("Card");
