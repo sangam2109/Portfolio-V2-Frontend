@@ -12,7 +12,7 @@ Self Coded Portfolio Website made using React JS and Chakra UI.
 
 ## Live Demo 
 
-- Click [here](https://sangam--portfolio.vercel.app/) to view the live demo.
+- Click [here](https://sangamportfolio.vercel.app/) to view the live demo.
 
 ## Features 📋
 
@@ -42,7 +42,7 @@ Self Coded Portfolio Website made using React JS and Chakra UI.
 
 <p align="center"> 
   <kbd>
-    <a href="https://sangam--portfolio.vercel.app/" target="_blank">
+    <a href="https://sangamportfolio.vercel.app/" target="_blank">
   </a>
   </kbd>
 </p>
