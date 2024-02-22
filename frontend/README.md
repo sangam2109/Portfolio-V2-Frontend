@@ -48,28 +48,6 @@ Self Coded Portfolio Website made using React JS and Chakra UI.
 </p>
 
 
-## Getting Started ⚡ :-
-
-**1. Clone this repo by running the following command :-**
-
-```bash
- git clone https://github.com/Rahul1582/portfolio-rahulkp.git
-```
-
-**2. Now Install all the required packages by running the following commands :-**
-
-```bash
- npm install
-```
-
-**3. Now start the React server by running the following command :-**
-
-```bash
- npm start
-```
-
-**3.** **🎉 Open your browser and go to `https://localhost:3000`**
-
 ## Deployment 📦
 
 This Web Application is deployed to Render.
