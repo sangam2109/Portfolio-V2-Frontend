@@ -17,7 +17,8 @@ import bootcamp from "../../assets/project/bootcamp.jpg";
 import portfolio from "../../assets/project/portfolio.jpg";
 import interactivecard from "../../assets/project/interactivecard.jpg";
 import Calculator from "../../assets/project/sgpaCalculator.jpg"
-
+import Training from "../../assets/project/training-tracker.png"
+import hukamnama  from "../../assets/project/hukamnama.png"
 
 
 export default function Projects() {
@@ -52,10 +53,26 @@ export default function Projects() {
           <ProjectCard
             projectImage={sportsmeet}
             projectName={"Athletic Meet Registeration"}
-            aboutProject={"This is web and app based solution for flexible Athletic mett registeration for colleges and schools"}
+            aboutProject={"This is web and app based solution for flexible Athletic mett registeration for Guru Nanak Dev Engineering College . This consist of Attendance marking via manually with help of buttons as well as QR scan method , Dynamic Certificate Generation , Export Functionalities etc etc.. "}
             techStack={"EXPRESS JS, NODE JS, IONIC , MONGODB, MATERIAL UI"}
             projectLiveLink="https://sports2024.vercel.app/"
             projectLink="https://github.com/Vansh1190/Sports22"
+          />
+          <ProjectCard
+            projectImage={Training}
+            projectName={"Training Tracker GNDEC"}
+            aboutProject={"This MERN stack project facilitates comprehensive management of student training and placement data. It enables students to input their training records, such as TR_101, TR_102, based on their academic year. The admin panel empowers teachers to view, lock, and export data with various filters, including certificates and reports, while ensuring secure authentication throughout the system."}
+            techStack={"REACT JS,  MATERIAL UI , NODE JS , MONGODB, EXPRESS JS"}
+            projectLiveLink="https://training-tracker-gndec.vercel.app/login"
+            projectLink="https://github.com/whogurdevil/training-tracker-gndec"
+          />
+          <ProjectCard
+            projectImage={hukamnama}
+            projectName={"HUKAMNAMA TO IMAGE WINDOW APP"}
+            aboutProject={"This Electron JS application, built with TypeScript, provides a seamless solution for exporting daily Hukamnama Sahib as PNG images. Users can access the application to generate and save Hukamnama Sahib images effortlessly. The combination of Electron JS and TypeScript ensures efficient development and robust performance."}
+            techStack={"ELECTRON JS, TYPESCRIPT"}
+            projectLiveLink="Coming Soon!"
+            projectLink="https://github.com/whogurdevil/HukamNama"
           />
           <ProjectCard
             projectImage={Calculator}
@@ -65,6 +82,7 @@ export default function Projects() {
             projectLiveLink="https://www.sgpacalculator.tech/"
             projectLink="https://github.com/sangam2109/SgpaCalculator"
           />
+          
           <ProjectCard
             projectImage={bootcamp} // Replace virtualLabImage with the actual image source
             projectName={"Virtual Lab with IIT Roorkee"}
@@ -79,7 +97,7 @@ export default function Projects() {
             projectName={"Questener:NLP based questgen generator"}
             aboutProject={"Generating a question based on data entered by used using Natural Language Processing"}
             techStack={"FLASK, SPICY , NLTK , PANDA , TRANSFORMER , NUMPY , PYTHON"}
-            projectLiveLink=""
+            projectLiveLink="Coming  Soon!"
             projectLink="https://github.com/sangam2109/hackathon"
           />
           <ProjectCard

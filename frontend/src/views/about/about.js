@@ -139,6 +139,19 @@ export default function About() {
                     value="English, Hindi, Punjabi"
                   />
                 </SimpleGrid>
+                <SimpleGrid marginTop={5}>
+                  <AboutMeInfo
+                    boxShadow={cardShadow}
+                    title="Roles and Responsibilities"
+                    value={(
+                      <>
+                        1. Representing my branch on the Student Council Team. <br/>
+                        2. Convenor Of Causmic Club. <br />
+                        3. Executive Member Of Training & Placement Cell
+                      </>
+                    )}
+                  />
+                </SimpleGrid>
               </Box>
             </Flex>
           </Grid>
