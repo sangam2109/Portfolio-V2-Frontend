@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react';
 import Navbar from "../../components/Navbar/Navbar";
 import routes from "../../routes";
+import useToast from '../../components/Toasters/toasthook';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const { showToast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
@@ -21,21 +23,19 @@ const Contact = () => {
       }
     }
   };
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Check if input fields are not empty
     if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all the fields");
+      showToast('info', "Please fill all the fields!");
       return;
     }
 
     try {
       // Simulate a delay for demonstration purposes
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
+        showToast('loading', "Request in Progress !!!!")
+    
       // Send the message to the backend
       const response = await fetch('https://sangamportfolio.onrender.com/send-email', {
         method: 'POST',
@@ -44,15 +44,19 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
+      
 
       if (response.ok) {
         setIsSubmitted(true);
-        setFormData({ name: '', email: '', message: '' }); // Clear the input values after the simulated delay
+         setFormData({ name: '', email: '', message: '' }); // Clear the input values after the simulated delay
+        showToast("success", "Form Submitted Successfully");
       } else {
         console.error('Failed to send email');
+        showToast("error", "Failed to send email");
       }
     } catch (error) {
       console.error('Error:', error);
+      showToast("error", "Internal server error");
     }
   };
 
