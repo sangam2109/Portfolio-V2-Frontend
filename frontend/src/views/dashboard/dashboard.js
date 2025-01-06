@@ -34,7 +34,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("https://api.quotable.io/random")
+      .get("http://api.quotable.io/random")
       .then((response) => {
         let content = response.data.content;
         setQuote(content);
