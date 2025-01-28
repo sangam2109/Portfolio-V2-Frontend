@@ -79,7 +79,7 @@ export default function Projects() {
             projectName={"GPA Calculator"}
             aboutProject={"GPA calculator tailored for GNDEC students, allowing them to input their marks, view results instantly, and generate detailed reports. With built-in support for various branches, the tool efficiently computes semester-wise grades, aiding students in tracking their academic progress seamlessly."}
             techStack={"REACT JS,  MATERIAL UI"}
-            projectLiveLink="https://www.sgpacalculator.tech/"
+            projectLiveLink="https://gndecsgpacalculator.vercel.app/"
             projectLink="https://github.com/sangam2109/SgpaCalculator"
           />
           
