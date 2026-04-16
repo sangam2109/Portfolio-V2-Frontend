@@ -8,12 +8,14 @@ import {
   useColorModeValue
 } from "@chakra-ui/react";
 import { AiFillGithub, AiFillHeart } from "react-icons/ai";
-import { BsInstagram } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { SiLeetcode } from "react-icons/si";
 
 export default function Footer() {
-  const textColor = useColorModeValue("rgb(130, 11, 138)", "rgb(209, 250, 255)");
+  const textColor = useColorModeValue(
+    "rgb(130, 11, 138)",
+    "rgb(209, 250, 255)"
+  );
 
   return (
     <Flex
@@ -84,20 +86,11 @@ export default function Footer() {
           opacity="0.6"
           _hover={{ opacity: 1 }}
         >
-          <Link href="https://www.linkedin.com/in/sangam-arora-5078b6223/" target="blank">
+          <Link
+            href="https://www.linkedin.com/in/sangam-arora-5078b6223/"
+            target="blank"
+          >
             <BiLogoLinkedin />
-          </Link>
-        </ListItem>
-        <ListItem
-          me={{
-            base: "20px",
-            md: "40px"
-          }}
-          opacity="0.6"
-          _hover={{ opacity: 1 }}
-        >
-          <Link href="https://instagram.com/urs_sangam2122" target="blank">
-            <BsInstagram />
           </Link>
         </ListItem>
       </List>

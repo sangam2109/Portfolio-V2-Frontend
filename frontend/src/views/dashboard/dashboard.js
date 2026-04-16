@@ -21,7 +21,10 @@ export default function Dashboard() {
   const [quote, setQuote] = useState("");
   const styles = useStyleConfig("Card");
 
-  let highlightTextColor = useColorModeValue("rgb(130, 11, 138)", "rgb(209, 250, 255)");
+  let highlightTextColor = useColorModeValue(
+    "rgb(130, 11, 138)",
+    "rgb(209, 250, 255)"
+  );
   let textColor = useColorModeValue("gray.700", "white");
 
   const getActiveRoute = (routes) => {
@@ -34,7 +37,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://api.quotable.io/random")
+      .get("https://api.quotable.io/random")
       .then((response) => {
         let content = response.data.content;
         setQuote(content);
@@ -78,7 +81,7 @@ export default function Dashboard() {
                     fontWeight="bold"
                     color={textColor}
                   >
-                    Hello Everyone!! 🙋🏻‍♂️
+                    Hello Everyone!!
                   </Text>
 
                   <Text
@@ -99,9 +102,8 @@ export default function Dashboard() {
                     color={textColor}
                     mt="18px"
                   >
-                    {" "}
                     <Text display="inline-flex" color={highlightTextColor}>
-                      Student at GNDEC , Ludhiana.
+                      Programmer Analyst at Argusoft
                     </Text>
                   </Text>
                 </Box>

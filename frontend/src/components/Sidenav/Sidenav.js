@@ -12,7 +12,7 @@ import {
   useColorModeValue,
   useDisclosure
 } from "@chakra-ui/react";
-import React from "react";
+import { useRef } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import GitHubButton from "react-github-btn";
 import Content from "./Content";
@@ -29,9 +29,6 @@ export default function Sidenav(props) {
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)",
     "14px 17px 40px 4px rgba(112, 144, 176, 0.08)"
   );
-  // Chakra Color Mode
-  // let sidenavBg = useColorModeValue("secondaryGray.400", "navyBlue.300");
-  // let navbarBorderColor = useColorModeValue("lightblue.100", "lightpeach.100");
 
   return (
     <Box
@@ -41,7 +38,6 @@ export default function Sidenav(props) {
       minH="100%"
     >
       <Box
-        // bg={sidenavBg}
         transition={variantChange}
         w="300px"
         h="100vh"
@@ -58,13 +54,9 @@ export default function Sidenav(props) {
         >
           <Flex align="center" direction="column" fontSize="20px">
             {colorMode === "light" ? (
-              <>
-                <LazyLoadImage src={sidenavLight} effect="blur"></LazyLoadImage>
-              </>
+              <LazyLoadImage src={sidenavLight} effect="blur" />
             ) : (
-              <>
-                <LazyLoadImage src={sidenavDark} effect="blur"></LazyLoadImage>
-              </>
+              <LazyLoadImage src={sidenavDark} effect="blur" />
             )}
           </Flex>
 
@@ -82,7 +74,7 @@ export default function Sidenav(props) {
             alignItems="center"
           >
             <GitHubButton
-              href="https://github.com/Sangam2109/Portfolio-V2"
+              href="https://github.com/Sangam2109/Portfolio-V2-Frontend"
               data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
               data-icon="octicon-star"
               data-size="large"
@@ -92,7 +84,7 @@ export default function Sidenav(props) {
             </GitHubButton>
 
             <GitHubButton
-              href="https://github.com/Sangam2109/Portfolio-V2/fork"
+              href="https://github.com/sangam2109/Portfolio-V2-Frontend/fork"
               data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
               data-icon="octicon-repo-forked"
               data-size="large"
@@ -119,7 +111,7 @@ export function SideNavResponsive(props) {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const btnRef = React.useRef();
+  const btnRef = useRef();
 
   const { routes } = props;
 
@@ -171,19 +163,9 @@ export function SideNavResponsive(props) {
               >
                 <Flex align="center" direction="column" fontSize="20px">
                   {colorMode === "light" ? (
-                    <>
-                      <LazyLoadImage
-                        src={sidenavLight}
-                        effect="blur"
-                      ></LazyLoadImage>
-                    </>
+                    <LazyLoadImage src={sidenavLight} effect="blur" />
                   ) : (
-                    <>
-                      <LazyLoadImage
-                        src={sidenavDark}
-                        effect="blur"
-                      ></LazyLoadImage>
-                    </>
+                    <LazyLoadImage src={sidenavDark} effect="blur" />
                   )}
                 </Flex>
 
@@ -195,34 +177,6 @@ export function SideNavResponsive(props) {
                     <Content routes={routes} />
                   </Box>
                 </Stack>
-                <Flex
-                  align="center"
-                  direction="row"
-                  fontSize="20px"
-                  gap="20px"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <GitHubButton
-                    href="https://github.com/Rahul1582/portfolio-rahulkp"
-                    data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
-                    data-icon="octicon-star"
-                    data-size="large"
-                    aria-label="Star Rahul1582/portfolio-rahulkp on GitHub"
-                  >
-                    Star
-                  </GitHubButton>
-
-                  <GitHubButton
-                    href="https://github.com/Rahul1582/portfolio-rahulkp/fork"
-                    data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;"
-                    data-icon="octicon-repo-forked"
-                    data-size="large"
-                    aria-label="Fork Rahul1582/portfolio-rahulkp on GitHub"
-                  >
-                    Fork
-                  </GitHubButton>
-                </Flex>
               </Flex>
             </Box>
           </DrawerBody>

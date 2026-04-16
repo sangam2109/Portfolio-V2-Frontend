@@ -3,8 +3,6 @@ import {
   Box,
   SimpleGrid,
   Flex,
-  Text,
-  useColorModeValue
 } from "@chakra-ui/react";
 import routes from "../../routes";
 import Navbar from "../../components/Navbar/Navbar";
@@ -22,10 +20,7 @@ import hukamnama  from "../../assets/project/hukamnama.png"
 
 
 export default function Projects() {
-  const textColorPrimary = useColorModeValue(
-    "secondaryGray.900",
-    "lightpeach.100"
-  );
+
   const getActiveRoute = (routes) => {
     for (let i = 0; i < routes.length; i++) {
       if (window.location.href.indexOf(routes[i].path) !== -1) {

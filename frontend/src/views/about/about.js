@@ -7,10 +7,7 @@ import {
   useStyleConfig,
   Text,
   useColorModeValue,
-  useColorMode,
-  Icon,
-  Button,
-  Link
+  Icon
 } from "@chakra-ui/react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -24,8 +21,10 @@ import myphoto from "../../assets/aboutMePhoto.jpg";
 
 export default function About() {
   const styles = useStyleConfig("Card");
-  const { colorMode } = useColorMode();
-  const textColorPrimary = useColorModeValue("	rgb(130, 11, 138)", "rgb(209, 250, 255)");
+  const textColorPrimary = useColorModeValue(
+    "rgb(130, 11, 138)",
+    "rgb(209, 250, 255)"
+  );
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"
@@ -49,11 +48,6 @@ export default function About() {
           alignItems="center"
           mb="40px"
         >
-          {/* <TypeAnimation
-            sequence={["ABOUT ME", 500, "ABOUT", 500, "ABOUT ME", 500]}
-            style={{ fontSize: "3em" }}
-            cursor={false}
-          /> */}
           <Grid
             templateColumns={{
               base: "1fr",
@@ -81,13 +75,12 @@ export default function About() {
                 height="100%"
                 bg={textColorPrimary}
                 transform="rotate(4deg)"
-                // zIndex="-1"
               />
               <LazyLoadImage
                 src={myphoto}
                 width="100%"
                 height="100%"
-                alt="Image Alt"
+                alt="Sangam Arora"
                 effect="blur"
                 style={{ height: "100%" }}
               />
@@ -110,29 +103,28 @@ export default function About() {
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Education"
-                    value="GNDEC, LUDHIANA    "
+                    value="Guru Nanak Dev Engineering College, Ludhiana"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Degree"
-                    value="B.TECH."
+                    value="B.Tech in Computer Science and Engineering"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
-                    title="Branch"
-                    value="Computer Science"
+                    title="Graduation"
+                    value="June 2025"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Designation"
-                    value="Student"
+                    value="Programmer Analyst"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Location"
-                    value="Ahmedgarh , Punjab"
+                    value="Gandhinagar, Gujarat"
                   />
-                  
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Languages"
@@ -142,12 +134,17 @@ export default function About() {
                 <SimpleGrid marginTop={5}>
                   <AboutMeInfo
                     boxShadow={cardShadow}
-                    title="Roles and Responsibilities"
+                    title="Career Snapshot"
                     value={(
                       <>
-                        1. Representing my branch on the Student Council Team. <br/>
-                        2. Convenor Of Causmic Club. <br />
-                        3. Executive Member Of Training & Placement Cell
+                        CGPA: 9.74 with university rank 1 across semesters 1-5
+                        and 8.
+                        <br />
+                        Working across React, Java, Spring Boot, PostgreSQL,
+                        Node.js, TypeScript, and MongoDB.
+                        <br />
+                        Strong DSA foundation with 300+ LeetCode problems
+                        solved.
                       </>
                     )}
                   />
@@ -165,7 +162,7 @@ export default function About() {
           mt="40px"
         >
           <Text color={textColorPrimary} fontSize="2em" textAlign="center">
-            {"<MY INTERESTS AND HOBBIES/>"}
+            {"<ACHIEVEMENTS AND LEADERSHIP/>"}
           </Text>
         </Flex>
         <SimpleGrid
@@ -184,9 +181,10 @@ export default function About() {
                 color="inherit"
               />
             </Box>
-            <Text textAlign="center">Poetry Writing (Punjabi)</Text>
+            <Text textAlign="center">Academic Excellence</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              Immerse myself in the rich tapestry of emotions and expressions through the beauty of Punjabi poetry. Crafting verses allows me to connect with my cultural roots and express the intricate nuances of life in a lyrical manner.
+              Silver Medalist with university rank 1 across all engineering
+              branches in semesters 1-5 and 8, maintaining a CGPA of 9.74.
             </Text>
           </Box>
           <Box __css={styles}>
@@ -198,9 +196,11 @@ export default function About() {
                 color="inherit"
               />
             </Box>
-            <Text textAlign="center">Teaching</Text>
+            <Text textAlign="center">Leadership</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              Sharing knowledge and insights with others is a passion that fuels my intellectual curiosity. Whether it's explaining complex concepts or mentoring others, the joy of contributing to someone else's learning journey is truly rewarding.
+              Co-Founded and served as Convener of the Causmic Club, coordinated
+              placement drives, and led large cross-functional student teams for
+              flagship campus events.
             </Text>
           </Box>
           <Box __css={styles}>
@@ -212,9 +212,10 @@ export default function About() {
                 color="inherit"
               />
             </Box>
-            <Text textAlign="center">Watching Movies</Text>
+            <Text textAlign="center">Competitive Problem Solving</Text>
             <Text color={textColorPrimary} textAlign="center" mt="5px">
-              A cinephile at heart, I find joy in exploring diverse cinematic landscapes. Whether it's the artistry of storytelling, the visual spectacle, or the emotional resonance, movies provide a unique form of entertainment that inspires and captivates me.
+              Solved 300+ LeetCode problems, secured runner-up in a national
+              hackathon, and participated twice in Smart India Hackathon.
             </Text>
           </Box>
         </SimpleGrid>
